@@ -27,14 +27,16 @@ def debit():
     return difference / duree_delai
 
 
+"""
 fichier = open("resultats.csv", "w")
 
 for i in range(20):
     fichier.write(str(round(debit())))
     fichier.write("\n")
-
-
 """
+
+
+"""Affiche la jauge de débit instantanné"""
 while True:
     largeur = 80
     debit_actuel = debit()
@@ -49,4 +51,4 @@ while True:
        debit_actuel,
        sep=""
     )
-"""
+
