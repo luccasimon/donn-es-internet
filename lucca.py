@@ -9,7 +9,7 @@ def octets_total():
     lignes = donnees.splitlines()
 
     for ligne in lignes:
-        if ligne.startswith("wlp8s0:"):
+        if ligne.startswith("wlp8s0") or ligne.startswith(" wlan0:"):
             mots = ligne.split()
             octets_recus = int(mots[1])
             octets_envoyes = int(mots[9])
@@ -40,7 +40,7 @@ for i in range(20):
 while True:
     largeur = 80
     debit_actuel = debit()
-    debit_max = 6_000_000
+    debit_max = 12_000_000
     nombre_caracteres = round(largeur * debit_actuel / debit_max)
     print("\033c")
     print(
